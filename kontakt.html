@@ -26,13 +26,13 @@
     <form action="#" method="post">
       <!-- TODO 1: fält för namn, e-post, telefon, datum (label + input med for/id) -->
       <div class="falt">
-        <label for="namn">Namn</label>
-        <input type="text" id="namn" name="namn" autocomplete="name" placeholder="Ditt namn">
+        <label for="namn">Namn *</label>
+        <input type="text" id="namn" name="namn" autocomplete="name" placeholder="Ditt namn" required>
       </div>
 
       <div class="falt">
-        <label for="epost">E-postadress</label>
-        <input type="email" id="epost" name="epost" autocomplete="email" placeholder="namn@exempel.com">
+        <label for="epost">E-postadress *</label>
+        <input type="email" id="epost" name="epost" autocomplete="email" placeholder="namn@exempel.com" required>
       </div>
 
       <div class="falt">
@@ -41,12 +41,12 @@
       </div>
 
       <div class="falt">
-        <label for="datum">Datum</label>
-        <input type="date" id="datum" name="datum">
+        <label for="datum">Datum *</label>
+        <input type="date" id="datum" name="datum" required>
       </div>
       <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
-      <label for="antal">Antal personer</label>
-      <select id="antal" name="antal">
+      <label for="antal">Antal personer *</label>
+      <select id="antal" name="antal" required>
         <option value="">Välj antal</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -58,7 +58,7 @@
       <label for="onskemal">Övriga önskemål</label>
       <textarea id="onskemal" name="onskemal" rows="4"></textarea>
       <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
-       <fieldset>
+      <fieldset>
         <legend>Kostönskemål</legend>
 
         <input type="checkbox" id="veg" name="kost" value="veg">
@@ -69,18 +69,22 @@
 
         <input type="checkbox" id="glutenfri" name="kost" value="glutenfri">
         <label for="glutenfri">Glutenfri</label>
-       </fieldset>
+      </fieldset>
 
-       <fieldset>
-        <legend>Hur vill du få bekräftelsen?</legend>
+      <fieldset>
+        <legend>Hur vill du få bekräftelsen? *</legend>
 
-        <input type="radio" id="kontakt-email" name="kontakt" value="epost">
+        <input type="radio" id="kontakt-email" name="kontakt" value="epost" required>
         <label for="kontakt-email">E-post</label>
 
         <input type="radio" id="kontakt-sms" name="kontakt" value="sms">
         <label for="kontakt-sms">SMS</label>
-       </fieldset>
+      </fieldset>
       <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
+      <input type="checkbox" id="samtycke" name="samtycke" value="samtycke" required>
+      <label for="samtycke">Jag godkänner att Kafé Kardemumma sparar mina uppgifter för bokningen. *</label>
+
+      <button type="submit">Skicka bokning</button>
     </form>
   </main>
 
