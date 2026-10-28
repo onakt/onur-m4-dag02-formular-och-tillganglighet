@@ -58,6 +58,28 @@
       <label for="onskemal">Övriga önskemål</label>
       <textarea id="onskemal" name="onskemal" rows="4"></textarea>
       <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
+       <fieldset>
+        <legend>Kostönskemål</legend>
+
+        <input type="checkbox" id="veg" name="kost" value="veg">
+        <label for="veg">Vegetarisk</label>
+
+        <input type="checkbox" id="vegan" name="kost" value="vegan">
+        <label for="vegan">Vegensk</label>
+
+        <input type="checkbox" id="glutenfri" name="kost" value="glutenfri">
+        <label for="glutenfri">Glutenfri</label>
+       </fieldset>
+
+       <fieldset>
+        <legend>Hur vill du få bekräftelsen?</legend>
+
+        <input type="radio" id="kontakt-email" name="kontakt" value="epost">
+        <label for="kontakt-email">E-post</label>
+
+        <input type="radio" id="kontakt-sms" name="kontakt" value="sms">
+        <label for="kontakt-sms">SMS</label>
+       </fieldset>
       <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
     </form>
   </main>
